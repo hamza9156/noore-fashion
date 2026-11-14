@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #FAF7F2;
+    color: #382B25;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: 0.02em;
+  }
+
+  .font-display {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.08em;
+  }
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DAC7B2;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A16A;
+}
+
+/* Luxury Card & Button Effects */
+.luxury-border {
+  border: 1px solid rgba(197, 161, 106, 0.35);
+}
+
+.luxury-border-dark {
+  border: 1px solid rgba(56, 43, 37, 0.15);
+}
+
+.btn-primary {
+  @apply bg-brown text-ivory px-7 py-3 font-medium text-xs tracking-widest uppercase transition-all duration-300 hover:bg-gold hover:text-white shadow-sm hover:shadow-gold-glow inline-flex items-center justify-center gap-2;
+}
+
+.btn-outline {
+  @apply border border-brown text-brown px-7 py-3 font-medium text-xs tracking-widest uppercase transition-all duration-300 hover:bg-brown hover:text-ivory inline-flex items-center justify-center gap-2;
+}
+
+.btn-gold {
+  @apply bg-gold text-white px-7 py-3 font-medium text-xs tracking-widest uppercase transition-all duration-300 hover:bg-gold-dark shadow-gold-glow inline-flex items-center justify-center gap-2;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #382B25 0%, #C5A16A 50%, #382B25 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle image zoom transition */
+.image-zoom-container {
+  overflow: hidden;
+}
+
+.image-zoom-container img {
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.image-zoom-container:hover img {
+  transform: scale(1.06);
+}
